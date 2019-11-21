@@ -17,10 +17,9 @@ body
 {
   position: fixed;
   bottom: 0;
-  width: 100%;
+  right: 2vw;
   padding-bottom: 2px;
-  text-align: left;
-  background-color: #f9f9f9;
+  text-align: right;
 }
 /* links */
 a 
