@@ -2,11 +2,14 @@ body
 {
   display: flex;
   flex-wrap: wrap;
+  margin: 0;
+  padding: 0 2vw;
   font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: #f9f9f9;
 }
 #app, #admin
 {
+  width: 100%;
   margin-bottom: 40px;
 }
 /* footer */
@@ -30,24 +33,31 @@ a:hover
   text-decoration: underline;
 }
 /* Elements */
+h2
+{
+  text-align: center;
+}
 input, button
 {
   margin: 2px;
 }
 li
 {
-  list-style-type: none;
+  display: inline-block;
   margin: 0 10px 20px 0;
   padding: 5px;
-  width: 220px;
+  width: 210px;
   border: 3px solid black;
+  list-style-type: none;
   text-align: center;
 }
 img
 {
   max-width: 200px;
-  max-height: 200px;
+  max-height: 100px;
   margin-top: 5px;
+  border: 2px solid black;
+  border-radius: 8px;
 }
 .delete
 {
@@ -59,4 +69,15 @@ img
   border: 2px solid black;
   font-weight: bold;
   background-color: red;
+}
+.sale-floor, .cart
+{
+  background-image: linear-gradient(to bottom right, aqua, yellow);
+}
+.homepage-site
+{
+  margin-top: 2px;
+  float: right;
+  font-style: italic;
+  color: darkgrey;
 }

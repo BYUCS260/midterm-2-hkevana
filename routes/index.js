@@ -69,8 +69,10 @@ router.put('/api/checked/:id', async (req, res) => {
     let product = await Product.findOne(id);
     if (product.checked == true) {
         product.checked = false;
+        console.log('unchecked');
     } else {
         product.checked = true;
+        console.log('checked');
     }
     try {
         await product.save();

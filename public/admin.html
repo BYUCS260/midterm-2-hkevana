@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         
         <link rel="stylesheet" href="/stylesheets/style.css" />
-        <link rel="icon" href="/images/favicon.png" type="image/png" />
+        <link rel="icon" href="/images/favicon.jpg" type="image/jpg" />
         
         <title>Administrative Page</title>
     </head>
@@ -17,12 +17,12 @@
             <input type="text" placeholder="Product Name" v-model="name" /><br>
             <input type="text" placeholder="Price" v-model="price" /><br>
             <input type="file" name="photo" @change="fileChanged" /><br>
-            <button @click="upload">Upload</button>
-            
+            <button @click="upload">Add Product</button>
+            <hr>
             <div v-if="products.length > 0">
-                <h1>Current Products</h1>
+                <h2>Current Products</h2>
                 <ul>
-                    <li v-for="item in products">
+                    <li v-for="item in sortProducts">
                         <span @click="deleteItem(item)" class="delete">X</span>
                         {{ item.name }} - price ${{ item.price }}.00<br>
                         ordered: {{ item.ordered }}<br>

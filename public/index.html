@@ -5,30 +5,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         
         <link rel="stylesheet" href="/stylesheets/style.css" />
-        <link rel="icon" href="/images/favicon.png" type="image/png" />
+        <link rel="icon" href="/images/favicon.jpg" type="image/jpg" />
         
         <title>Customer Shopping</title>
     </head>
     
     <body>
         <div id="app">
-            <h1>Shopping Interface</h1>
+            <a class="homepage-site" href="http://hkevana.com">hkevana.com</a>
+            <h1>Happy Shopping!!</h1>
+            <hr>
             <div v-if="products.length > 0">
-                <h1>Current Products</h1>
+                <h2>Current Products</h2>
                 <ul>
-                    <li v-for="item in products">
+                    <li v-for="item in sortProducts" class="sale-floor">
                         <input type="checkbox" @click="toggleChecked(item)">
-                        {{ item.name }} - price ${{ item.price }}.00<br>
+                        {{ item.name }} - ${{ item.price }}.00<br>
                         <img :src="item.path" />
                     </li>
                 </ul>
                 <button @click="purchase">Sumbit Purchase</button>
             </div>
             <div v-if="cart.length > 0">
-                <h1>Shopping Cart</h1>
+                <h2>Shopping Cart</h2>
                 <ul>
-                    <li v-for="item in cart">
-                        {{ item.name }} - price ${{ item.price }}.00<br>
+                    <li v-for="item in cart" class="cart">
+                        {{ item.name }} - ${{ item.price }}.00<br>
                         <img :src="item.path">
                     </li>
                 </ul>

@@ -36,4 +36,17 @@ var app = new Vue({
             this.getProducts();
         },
     },
+    computed: {
+        sortProducts() {
+            return this.products.sort((a, b) => {
+                var rval = 0;
+                if (a.name > b.name) {
+                    rval = 1;
+                } else {
+                    rval = -1;
+                }
+                return rval;
+            });
+        }
+    },
 });
